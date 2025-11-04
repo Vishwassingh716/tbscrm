@@ -54,3 +54,5 @@ public class Employees {
     @Column(name = "is_admin", nullable = true)
     private boolean isAdmin = false;
 }
+
+// entity
