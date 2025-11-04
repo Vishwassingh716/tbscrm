@@ -39,23 +39,3 @@ class UserProfileSerializer(ModelSerializer):
         model = UserProfile
         fields = '__all__'
 
-class CompanySerializer(ModelSerializer):
-    
-    owner = serializers.ReadOnlyField(source='owner.id')
-
-    class Meta:
-        model = Company
-        fields = "__all__"
-        read_only_fields = ['code'] 
-
-    def create(self, validated_data):
-        # Attach the owner to the company instance
-        validated_data['owner'] = self.context['request'].user
-        return super().create(validated_data)
-
-
-class RoleSerializer(ModelSerializer):
-
-    class Meta:
-        model = Roles
-        fields = '__all__'

@@ -4,6 +4,7 @@ import { Box , Button, Input , TextField , Typography } from '@mui/material'
 // images
 import logincover from "../assets/logincover.jpg";
 import venuecover from "../assets/venuecover.jpg";
+import tbslogo from "../assets/tbslogo.jpg";
 
 // animation
 
@@ -126,7 +127,7 @@ const LoginPage = () => {
             minHeight: "100vh",
             backgroundColor: "#f5f5f5",
             width:'100%',
-            mx:10,
+            // mx:10,
             overflow:"hidden",
           }}
         >
@@ -147,19 +148,19 @@ const LoginPage = () => {
       >
 
 
-        <Typography
-          variant="h4"
-          sx={{
-            
-            
-            mb: 3,
-            fontFamily: "'Great Vibes', cursive",
-            fontWeight: "bold",
-            color: "#333",
-          }}
-        >
-          The Bride Side
-        </Typography>
+        <Box
+  sx={{
+    width: 200,               // specify width
+    height: 50,              // specify height
+    mb: 3,
+    backgroundImage: `url(${tbslogo})`,
+    backgroundSize: "contain",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center",
+  }}
+/>
+          {/* The Bride Side */}
+        {/* </Box> */}
         <form>
         <TextField 
           type="text" 
@@ -252,7 +253,7 @@ const LoginPage = () => {
 
      
       </Box>
-          <Box
+          {/* <Box
           sx={{
             marginLeft : 5 ,
             height: "100vh", // full screen
@@ -318,7 +319,7 @@ const LoginPage = () => {
         rel="noopener noreferrer"><LinkedInIcon sx={{ color: "grey.700", cursor: "pointer" }} /></a>
       </Box>
     </Box>
-    </Box>
+    </Box> */}
       </Box>
     </Box>
   )
